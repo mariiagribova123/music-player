@@ -92,7 +92,5 @@ function updateVolume(){const silent=audio.muted||audio.volume===0,value=silent?
 volumeSlider.addEventListener('input',()=>{audio.volume=Number(volumeSlider.value)/100;audio.muted=false;updateVolume()});
 muteButton.addEventListener('click',()=>{if(audio.muted||audio.volume===0){audio.muted=false;if(audio.volume===0)audio.volume=lastAudibleVolume}else audio.muted=true;updateVolume()});
 audio.addEventListener('volumechange',updateVolume);updateVolume();
-const themeToggle=document.querySelector('#theme-toggle');
-themeToggle.addEventListener('click',()=>{const light=document.documentElement.dataset.theme!=='light';document.documentElement.dataset.theme=light?'light':'dark';themeToggle.setAttribute('aria-checked',String(light));document.querySelector('meta[name="theme-color"]').content=light?'#f5f6f3':'#101111'});
 window.addEventListener('beforeunload',()=>localTracks().forEach(song=>URL.revokeObjectURL(song.url)));
 render();
