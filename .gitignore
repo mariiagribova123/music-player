@@ -48,6 +48,7 @@ screenshots/
 *.code-workspace
 .codex/
 .agents/
+.sites-deploy/
 .DS_Store
 Thumbs.db
 desktop.ini
