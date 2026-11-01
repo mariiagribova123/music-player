@@ -1,7 +1,53 @@
+# Dependencies and generated builds
 node_modules/
+dist/
+build/
+coverage/
+.cache/
+.tmp/
+tmp/
+*.tsbuildinfo
+
+# Secrets and machine-local configuration
 .env
 .env.*
 !.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+credentials.json
+*.credentials.json
+secrets/
+private/
+config.local.*
+
+# Personal audio and local user data
+uploads/
+local-music/
+private-music/
+recordings/
+
+# Logs and runtime files
 *.log
+logs/
+*.pid
+*.pid.lock
+
+# Test and visual-review artifacts
+playwright-report/
+test-results/
+screenshots/
+.screenshots/
+
+# Editor, OS, and local agent settings
+.vscode/
+.idea/
+*.code-workspace
+.codex/
+.agents/
 .DS_Store
 Thumbs.db
+desktop.ini
